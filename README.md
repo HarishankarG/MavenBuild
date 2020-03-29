@@ -47,3 +47,7 @@ ansible-playbook mysql.yml
 
 
 service mysql status
+
+Tomcat Apache yml location
+
+wget https://gist.githubusercontent.com/anujdevopslearn/efa28700a3b8aca18d2866aa2d24fa02/raw/b36e9eaa312d74ee68c21de06777ae07002b06a8/TomcatInstallation.yml
