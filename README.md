@@ -66,5 +66,85 @@ To Uninstall tomcat apache
 https://gist.githubusercontent.com/anujdevopslearn/7f44b4505caa46da6b4bd66241044039/raw/21255d21ba75f05efae8df95e80a1dfaeb0d8026/TomcatUninstall.yml
 
 
+Logs
+= = = = 
+
+root@harishneo15yaho:~# cat TomcatUninstall.yml 
+---
+- hosts: localhost
+  vars:
+    - http_port: 8088
+    - tomcat_version: 8.5.53
+    
+  tasks:
+    - name: Make sure that we can connect to the machine
+      ping:
+
+    - name: Stop Tomcat
+      shell: ./shutdown.sh
+      args:
+       chdir: /opt/apache-tomcat-{{ tomcat_version }}/bin/
+      become: true
+      become_user: tomcat
+
+    - name: Remove Tomcat
+      file:
+        path: /opt/apache-tomcat-{{ tomcat_version }}
+        state: absent
+
+    - name: remove user "tomcat"
+      user:
+        name: tomcat
+        state: absent
+
+    - name: remove group "tomcat"
+      group:
+        name: tomcat
+        state: absent
+root@harishneo15yaho:~# 
+root@harishneo15yaho:~# 
+root@harishneo15yaho:~# 
+root@harishneo15yaho:~# ansible-playbook TomcatUninstall.yml 
+
+PLAY [localhost] ****************************************************************************************************************************************************
+
+TASK [Gathering Facts] **********************************************************************************************************************************************
+ok: [localhost]
+
+TASK [Make sure that we can connect to the machine] *****************************************************************************************************************
+ok: [localhost]
+
+TASK [Stop Tomcat] **************************************************************************************************************************************************
+changed: [localhost]
+
+TASK [Remove Tomcat] ************************************************************************************************************************************************
+changed: [localhost]
+
+TASK [remove user "tomcat"] *****************************************************************************************************************************************
+changed: [localhost]
+
+TASK [remove group "tomcat"] ****************************************************************************************************************************************
+ok: [localhost]
+
+PLAY RECAP **********************************************************************************************************************************************************
+localhost                  : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+root@harishneo15yaho:~# cd /opt/
+root@harishneo15yaho:/opt# ls -lrat
+total 194724
+-rw-r--r--  1 root            root                 3852 Sep 13  2016 zabbix-release_3.2-1+xenial_all.deb
+drwxr-xr-x  3 root            root                 4096 Nov 26 11:07 google
+-rw-rw-r--  1 harishneo15yaho harishneo15yaho 189039090 Dec  6 10:35 eclipse-java-oxygen-3a-linux-gtk-x86_64.tar.gz
+drwxrwxr-x  8 root            root                 4096 Dec  6 10:55 eclipse
+-rw-r--r--  1 root            root                 2662 Dec  7 07:40 1
+-rw-r--r--  1 root            root                  206 Dec  7 11:11 check_idletime.desktop
+drwxr-xr-x  5 root            root                 4096 Dec  8 12:22 .config
+drw-r-xr-x 10 root            root                 4096 Dec 12 10:06 91532
+-rwxr-xr-x  1 root            root                  649 Dec 24 07:38 check_idletime.py
+-rw-r--r--  1 root            root                 4153 Jan  3 10:02 linux_idletime.py
+drwxr-xr-x 23 root            root                 4096 Mar 29 16:34 ..
+-rw-r--r--  1 root            root             10300600 Mar 29 17:39 apache-tomcat-8.5.53.tar.gz
+drwxr-xr-x  6 root            root                 4096 Mar 29 17:52 .
+root@harishneo15yaho:/opt# 
 
 
