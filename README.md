@@ -51,3 +51,11 @@ service mysql status
 Tomcat Apache yml location
 
 wget https://gist.githubusercontent.com/anujdevopslearn/efa28700a3b8aca18d2866aa2d24fa02/raw/b36e9eaa312d74ee68c21de06777ae07002b06a8/TomcatInstallation.yml
+
+
+
+root@harishneo15yaho:/opt/apache-tomcat-8.5.53/bin# service tomcat status
+● tomcat.service - Tomcat - instance 
+   Loaded: loaded (/etc/systemd/system/tomcat.service; disabled; vendor preset: enabled)
+   Active: inactive (dead)
+root@harishneo15yaho:/opt/apache-tomcat-8.5.53/bin# 
