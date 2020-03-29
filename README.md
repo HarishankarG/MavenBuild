@@ -59,3 +59,12 @@ root@harishneo15yaho:/opt/apache-tomcat-8.5.53/bin# service tomcat status
    Loaded: loaded (/etc/systemd/system/tomcat.service; disabled; vendor preset: enabled)
    Active: inactive (dead)
 root@harishneo15yaho:/opt/apache-tomcat-8.5.53/bin# 
+
+
+To Uninstall tomcat apache
+
+https://gist.githubusercontent.com/anujdevopslearn/7f44b4505caa46da6b4bd66241044039/raw/21255d21ba75f05efae8df95e80a1dfaeb0d8026/TomcatUninstall.yml
+
+
+
+
