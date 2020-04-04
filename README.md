@@ -148,3 +148,16 @@ drwxr-xr-x  6 root            root                 4096 Mar 29 17:52 .
 root@harishneo15yaho:/opt# 
 
 
+
+
+
+
+
+https://github.com/anujdevopslearn/AspDotNetDocker
+
+
+
+
+
+
+
