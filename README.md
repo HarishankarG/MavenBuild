@@ -164,3 +164,13 @@ https://github.com/anujdevopslearn/InterviewQuestions/blob/master/InstallationGu
 
 
 
+curl https://assets.nagios.com/downloads/nagiosxi/install.sh | sh
+
+
+
+
+https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-Manually-on-Linux.pdf
+
+
+
+
