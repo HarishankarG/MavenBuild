@@ -174,3 +174,10 @@ https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-Manually-
 
 
 
+https://github.com/anujdevopslearn/InterviewQuestions/blob/master/InstallationGuides/CleanServices.txt
+
+
+
+
+
+
