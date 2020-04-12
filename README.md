@@ -180,4 +180,15 @@ https://github.com/anujdevopslearn/InterviewQuestions/blob/master/InstallationGu
 
 
 
+For cleanup
 
+
+apt remove --purge mysql-server-core-5.7 mysql-server-5.7 mysql-server mysql-client mysql-client-5.7 apache2 jenkins nginx
+docker rm `docker ps -a -q` -f
+docker rmi `docker images -q`
+
+
+
+
+
+=================
